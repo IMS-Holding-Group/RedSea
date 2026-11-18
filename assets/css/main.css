@@ -1,0 +1,245 @@
+/* الخطوط */
+@font-face { font-family: "IBM Plex Sans Arabic"; src: url("../fonts/IBMPlexSansArabic-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap }
+@font-face { font-family: "IBM Plex Sans Arabic"; src: url("../fonts/IBMPlexSansArabic-Medium.woff2") format("woff2"); font-weight: 500; font-display: swap }
+@font-face { font-family: "IBM Plex Sans Arabic"; src: url("../fonts/IBMPlexSansArabic-SemiBold.woff2") format("woff2"); font-weight: 600; font-display: swap }
+@font-face { font-family: "IBM Plex Sans Arabic"; src: url("../fonts/IBMPlexSansArabic-Bold.woff2") format("woff2"); font-weight: 700; font-display: swap }
+
+/* المتغيرات */
+:root { --color-primary: #0B2545; --color-accent: #C8102E; --color-accent-dark: #9E0C24; --color-sea: #13315C; --color-sea-light: #EEF4FA; --color-bg: #F7F9FC; --color-surface: #FFFFFF; --color-border: #D9E1EA; --color-text: #1B263B; --color-muted: #5C6B7E; --color-success: #1E7F4F; --color-warning: #B7791F; --color-danger: #B42318; --color-info: #1F5FA8; --radius: 8px; --font: "IBM Plex Sans Arabic", Tahoma, Arial, sans-serif }
+
+/* الأساس */
+*, *::before, *::after { box-sizing: border-box }
+html { font-size: 17px }
+body { margin: 0; font-family: var(--font); font-size: 1rem; line-height: 1.7; color: var(--color-text); background: var(--color-bg) }
+h1, h2, h3, h4 { margin: 0 0 12px; line-height: 1.35; color: var(--color-primary) }
+h1 { font-size: 30px; font-weight: 700 }
+h2 { font-size: 22px; font-weight: 700 }
+h3 { font-size: 19px; font-weight: 600 }
+p { margin: 0 0 12px }
+a { color: var(--color-info); text-decoration: none }
+a:hover { text-decoration: underline }
+img { max-width: 100% }
+.muted { color: var(--color-muted) }
+.small { font-size: 15px }
+.hidden { display: none !important }
+.ltr { direction: ltr; unicode-bidi: isolate }
+.dt { direction: rtl; unicode-bidi: isolate; white-space: nowrap }
+.dt span { unicode-bidi: isolate }
+.container { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 20px }
+main.container { padding-top: 28px; padding-bottom: 48px; min-height: calc(100vh - 170px) }
+
+/* الترويسة */
+.site-header { position: sticky; top: 0; z-index: 50; border-bottom: 1px solid var(--color-border); background: var(--color-surface) }
+.site-header .container { display: flex; gap: 16px; align-items: center; min-height: 72px }
+.brand img { display: block; height: 44px; width: auto }
+.nav { display: flex; flex: 1; flex-wrap: wrap; gap: 4px }
+.nav a { display: inline-block; padding: 6px 12px; border-radius: var(--radius); font-weight: 500; color: var(--color-text) }
+.nav a:hover { text-decoration: none; background: var(--color-sea-light) }
+.nav a.active { color: var(--color-accent); background: var(--color-sea-light) }
+.header-tools { display: flex; gap: 8px; align-items: center }
+.bell { position: relative }
+.bell .count { position: absolute; top: -4px; left: -4px; min-width: 20px; padding: 0 5px; border-radius: 10px; font-size: 12px; font-weight: 700; line-height: 20px; color: #FFFFFF; text-align: center; background: var(--color-accent) }
+.user-name { font-size: 15px; color: var(--color-muted) }
+
+/* الذيل */
+.site-footer { padding: 22px 0; border-top: 1px solid var(--color-border); font-size: 15px; color: var(--color-muted); background: var(--color-surface) }
+
+/* الأزرار */
+.btn { display: inline-flex; gap: 8px; align-items: center; justify-content: center; padding: 7px 16px; border: 1px solid var(--color-accent); border-radius: var(--radius); font-family: var(--font); font-size: 16px; font-weight: 700; line-height: 1.5; color: #FFFFFF; background: var(--color-accent); cursor: pointer }
+.btn:hover { text-decoration: none; background: var(--color-accent-dark) }
+.btn:disabled { opacity: 0.55; cursor: not-allowed }
+.btn-secondary { border-color: var(--color-primary); color: var(--color-primary); background: transparent }
+.btn-secondary:hover { color: #FFFFFF; background: var(--color-primary) }
+.btn-ghost { border-color: var(--color-border); color: var(--color-text); background: var(--color-surface) }
+.btn-ghost:hover { background: var(--color-sea-light) }
+.btn-success { border-color: var(--color-success); background: var(--color-success) }
+.btn-success:hover { background: #17633D }
+.btn-danger { border-color: var(--color-danger); background: var(--color-danger) }
+.btn-danger:hover { background: #8F1C13 }
+.btn-sm { padding: 4px 10px; font-size: 14px }
+.btn-icon { padding: 6px 10px }
+.btn-sos { padding: 10px 20px; font-size: 19px }
+.btn.menu-toggle { display: none }
+.grid + .grid, .grid + .panel, .panel + .grid { margin-top: 18px }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center }
+
+/* الأقسام والبطاقات */
+.page-head { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; justify-content: space-between; margin-bottom: 22px }
+.page-head p { margin: 0; color: var(--color-muted) }
+.panel { margin-bottom: 22px; padding: 20px; border: 1px solid var(--color-border); border-radius: 12px; background: var(--color-surface) }
+.panel-head { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin-bottom: 14px }
+.panel-head h2, .panel-head h3 { margin: 0 }
+.grid { display: grid; gap: 18px }
+.grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) }
+.grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)) }
+.grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)) }
+.stat { padding: 16px 18px; border: 1px solid var(--color-border); border-radius: 12px; background: var(--color-surface) }
+.stat .value { display: block; font-size: 28px; font-weight: 700; line-height: 1.3; color: var(--color-primary) }
+.stat .label { font-size: 15px; color: var(--color-muted) }
+.stat i { float: left; font-size: 22px; color: var(--color-sea) }
+
+/* بطاقات اليخوت */
+.yacht-card { display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--color-border); border-radius: 12px; background: var(--color-surface) }
+.yacht-photo { display: flex; align-items: center; justify-content: center; height: 170px; overflow: hidden; font-size: 54px; color: #FFFFFF; background: var(--color-sea) }
+.yacht-photo img { width: 100%; height: 100%; object-fit: cover }
+.yacht-body { display: flex; flex: 1; flex-direction: column; gap: 8px; padding: 16px }
+.yacht-body h3 { margin: 0 }
+.specs { display: flex; flex-wrap: wrap; gap: 6px 16px; margin: 0; padding: 0; font-size: 15px; color: var(--color-muted); list-style: none }
+.specs i { margin-left: 4px; color: var(--color-sea) }
+.price { font-size: 20px; font-weight: 700; color: var(--color-primary) }
+.yacht-foot { display: flex; gap: 8px; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 8px }
+
+/* الشارات */
+.badge { display: inline-flex; gap: 6px; align-items: center; padding: 2px 10px; border-radius: 999px; font-size: 14px; font-weight: 500; line-height: 1.7; white-space: nowrap; color: var(--color-text); background: #E7ECF2 }
+.badge-success { color: #0F5132; background: #DDF1E6 }
+.badge-warning { color: #7A4E0B; background: #FBEBC8 }
+.badge-danger { color: #8A1C12; background: #F9DEDA }
+.badge-info { color: #123F73; background: #DCE9F8 }
+.badge-muted { color: var(--color-muted); background: #E7ECF2 }
+
+/* النماذج */
+.form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 18px }
+.form-grid .full { grid-column: 1 / -1 }
+.field { display: flex; flex-direction: column; gap: 4px }
+.field label { font-size: 15px; font-weight: 500; color: var(--color-primary) }
+.field input, .field select, .field textarea { width: 100%; padding: 8px 12px; border: 1px solid var(--color-border); border-radius: var(--radius); font-family: var(--font); font-size: 16px; color: var(--color-text); background: #FFFFFF }
+.field textarea { min-height: 90px; resize: vertical }
+.field input:focus, .field select:focus, .field textarea:focus { border-color: var(--color-info); outline: 2px solid #CFE0F5 }
+.field .error { min-height: 20px; font-size: 14px; color: var(--color-danger) }
+.field .hint { font-size: 14px; color: var(--color-muted) }
+.check { display: flex; gap: 8px; align-items: flex-start; font-size: 15px }
+.check input { width: 18px; height: 18px; margin-top: 4px }
+.filters { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; align-items: end }
+
+/* الجداول */
+.table-wrap { overflow-x: auto; border: 1px solid var(--color-border); border-radius: 12px; background: var(--color-surface) }
+table { width: 100%; border-collapse: collapse; font-size: 15px }
+th, td { padding: 10px 12px; border-bottom: 1px solid var(--color-border); text-align: right; vertical-align: middle }
+th { font-weight: 600; color: var(--color-primary); white-space: nowrap; background: var(--color-sea-light) }
+tr:last-child td { border-bottom: 0 }
+
+/* التنبيهات والرسائل */
+.notice { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 14px; padding: 12px 14px; border: 1px solid var(--color-border); border-radius: var(--radius); font-size: 15px; background: var(--color-sea-light) }
+.notice i { margin-top: 5px }
+.notice-warning { border-color: #EFD48E; background: #FDF6E3 }
+.notice-danger { border-color: #EDB5AE; background: #FCEEEC }
+.notice-success { border-color: #A9D8BE; background: #EAF6EF }
+.empty { padding: 30px 16px; color: var(--color-muted); text-align: center }
+.empty i { display: block; margin-bottom: 8px; font-size: 30px; color: var(--color-border) }
+.loading { padding: 24px; color: var(--color-muted); text-align: center }
+.toast-area { position: fixed; bottom: 20px; left: 20px; z-index: 200; display: flex; flex-direction: column; gap: 8px; max-width: 380px }
+.toast { padding: 12px 16px; border-radius: var(--radius); font-size: 15px; color: #FFFFFF; background: var(--color-primary); box-shadow: 0 6px 18px rgba(11, 37, 69, 0.2) }
+.toast-error { background: var(--color-danger) }
+.toast-success { background: var(--color-success) }
+
+/* النوافذ */
+.modal-backdrop { position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 150; display: flex; align-items: center; justify-content: center; padding: 16px; background: rgba(11, 37, 69, 0.45) }
+.modal { width: 100%; max-width: 620px; max-height: 90vh; overflow-y: auto; padding: 22px; border-radius: 12px; background: var(--color-surface); box-shadow: 0 16px 40px rgba(11, 37, 69, 0.25) }
+.modal-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px }
+.modal-head h2 { margin: 0 }
+.modal-foot { display: flex; gap: 8px; justify-content: flex-start; margin-top: 18px }
+
+/* الصفحة الرئيسية */
+.hero { position: relative; overflow: hidden; margin: -28px -20px 30px; padding: 56px 32px; color: #FFFFFF; background: var(--color-primary) }
+.hero-chart { position: absolute; top: 0; right: 0; bottom: 0; left: 0; opacity: 0.35 }
+.hero-inner { position: relative; max-width: 700px }
+.hero h1 { font-size: 38px; color: #FFFFFF }
+.hero p { font-size: 19px; color: #D6E2F0 }
+.quick-search { position: relative; margin-top: 24px; padding: 18px; border-radius: 12px; color: var(--color-text); background: var(--color-surface) }
+.feature { padding: 20px; border: 1px solid var(--color-border); border-radius: 12px; background: var(--color-surface) }
+.feature .icon { display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; margin-bottom: 10px; border-radius: 10px; font-size: 20px; color: var(--color-accent); background: #FBE7EA }
+.steps { counter-reset: step; margin: 0; padding: 0; list-style: none }
+.steps li { position: relative; padding: 0 44px 14px 0 }
+.steps li::before { position: absolute; top: 0; right: 0; width: 30px; height: 30px; border-radius: 50%; font-weight: 700; line-height: 30px; color: #FFFFFF; text-align: center; background: var(--color-sea); counter-increment: step; content: counter(step) }
+
+/* تسجيل الدخول */
+.auth-wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; align-items: start; max-width: 1000px; margin: 20px auto }
+.auth-box { padding: 28px; border: 1px solid var(--color-border); border-radius: 12px; background: var(--color-surface) }
+.auth-box .logo { display: block; height: 52px; margin-bottom: 18px }
+.tabs { display: flex; gap: 6px; margin-bottom: 18px; border-bottom: 1px solid var(--color-border) }
+.tabs button { margin-bottom: -1px; padding: 8px 14px; border: 0; border-bottom: 3px solid transparent; font-family: var(--font); font-size: 16px; font-weight: 700; color: var(--color-muted); background: none; cursor: pointer }
+.tabs button.active { border-bottom-color: var(--color-accent); color: var(--color-primary) }
+.demo-table td { cursor: pointer }
+.demo-table tr:hover td { background: var(--color-sea-light) }
+
+/* الخريطة */
+.map { position: relative; height: 520px; overflow: hidden; direction: ltr; border: 1px solid var(--color-border); border-radius: 12px; background: #AAD3DF; touch-action: none; user-select: none; cursor: grab }
+.map.dragging { cursor: grabbing }
+.map.offline { background-color: #CFE3EE; background-image: linear-gradient(rgba(19, 49, 92, 0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(19, 49, 92, 0.12) 1px, transparent 1px); background-size: 40px 40px }
+.map.offline .map-tiles { display: none }
+.map-tiles, .map-svg { position: absolute; top: 0; left: 0; width: 100%; height: 100% }
+.map-tiles img { position: absolute; width: 256px; height: 256px; max-width: none }
+.map-controls { position: absolute; top: 10px; right: 10px; z-index: 5; display: flex; flex-direction: column; gap: 6px }
+.map-controls button { width: 36px; height: 36px; border: 1px solid var(--color-border); border-radius: var(--radius); font-size: 16px; color: var(--color-primary); background: #FFFFFF; cursor: pointer }
+.map-attrib { position: absolute; bottom: 0; left: 0; z-index: 5; padding: 2px 8px; font-size: 12px; color: #333333; background: rgba(255, 255, 255, 0.85) }
+.map-status { position: absolute; top: 10px; left: 10px; z-index: 5; padding: 4px 10px; border-radius: var(--radius); font-size: 13px; direction: rtl; color: var(--color-text); background: rgba(255, 255, 255, 0.92) }
+.map-tip { position: absolute; z-index: 6; max-width: 260px; padding: 8px 10px; border: 1px solid var(--color-border); border-radius: var(--radius); font-size: 14px; direction: rtl; background: #FFFFFF; box-shadow: 0 4px 14px rgba(11, 37, 69, 0.18); pointer-events: none }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 10px; font-size: 14px; color: var(--color-muted) }
+.legend span { display: inline-flex; gap: 6px; align-items: center }
+.legend b { display: inline-block; width: 14px; height: 14px; border-radius: 3px }
+
+/* الرسوم البيانية */
+.chart svg { display: block; width: 100%; height: auto }
+.chart text { font-family: var(--font); font-size: 12px; fill: var(--color-muted) }
+
+/* المرابط */
+.berth-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 10px }
+.berth { padding: 10px; border: 1px solid var(--color-border); border-radius: var(--radius); font-size: 14px; text-align: center; background: #FFFFFF; cursor: pointer }
+.berth strong { display: block; font-size: 17px; color: var(--color-primary) }
+.berth.available { background: #EAF6EF }
+.berth.occupied { background: #DCE9F8 }
+.berth.maintenance { background: #FDF6E3 }
+.berth.closed { background: #EEF0F3 }
+
+/* الطقس */
+.weather-strip { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 6px }
+.wx { min-width: 76px; padding: 8px 6px; border: 1px solid var(--color-border); border-radius: var(--radius); font-size: 13px; text-align: center; background: #FFFFFF }
+.wx strong { display: block; font-size: 14px }
+.wx.safe { background: #EAF6EF }
+.wx.caution { background: #FDF6E3 }
+.wx.unsafe { background: #FCEEEC }
+.progress { height: 8px; overflow: hidden; border-radius: 4px; background: #E7ECF2 }
+.progress span { display: block; height: 100%; background: var(--color-success) }
+.progress span.warn { background: var(--color-warning) }
+.progress span.over { background: var(--color-danger) }
+.gallery { display: grid; grid-template-columns: 2fr 1fr; gap: 8px; height: 320px; margin-bottom: 18px }
+.gallery .yacht-photo { height: 100%; border-radius: 12px }
+.thumbs { display: flex; flex-wrap: wrap; gap: 8px }
+.thumbs figure { position: relative; width: 110px; height: 80px; margin: 0; overflow: hidden; border-radius: var(--radius) }
+.thumbs img { width: 100%; height: 100%; object-fit: cover }
+.thumbs button { position: absolute; top: 4px; left: 4px }
+.key-box { padding: 10px; border: 1px dashed var(--color-accent); border-radius: var(--radius); font-family: monospace; word-break: break-all; background: #FFF7F8 }
+.notif { display: flex; gap: 14px; align-items: flex-start; padding: 14px 4px; border-bottom: 1px solid var(--color-border) }
+.notif.unread { background: #F4F8FD }
+.notif i { margin-top: 5px; color: var(--color-sea) }
+.notif .body { flex: 1 }
+
+/* التجاوب */
+@media (max-width: 1000px) {
+  .grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)) }
+  .grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)) }
+  .auth-wrap { grid-template-columns: 1fr }
+}
+@media (max-width: 760px) {
+  html { font-size: 16px }
+  h1 { font-size: 26px }
+  .btn.menu-toggle { display: inline-flex }
+  .site-header .container { flex-wrap: wrap }
+  .nav { display: none; flex-basis: 100%; flex-direction: column; order: 3; padding-bottom: 10px }
+  .nav.open { display: flex }
+  .header-tools { margin-right: auto }
+  .user-name { display: none }
+  .grid-2, .grid-3, .form-grid { grid-template-columns: minmax(0, 1fr) }
+  .grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px }
+  .stat .value { font-size: 22px }
+  .brand img { height: 36px }
+  .site-header .container { gap: 8px }
+  .hero { padding: 36px 20px }
+  .hero h1 { font-size: 28px }
+  .map { height: 400px }
+  .gallery { grid-template-columns: 1fr; height: auto }
+  .gallery .yacht-photo { height: 220px }
+}
+.yacht-marker { cursor: pointer }
+.stale-box { background: #8A94A3 }
+.gallery-empty { height: 180px }
